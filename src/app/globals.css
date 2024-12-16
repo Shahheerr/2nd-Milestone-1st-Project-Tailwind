@@ -2,68 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary: #3498db;
-  --secondary: #2ecc71;
-  --background: #f4f4f4;
-  --text: #333;
-  --light-text: #777;
+@layer base {
+  :root {
+    --color-primary: 52 152 219;
+    --color-secondary: 46 204 113;
+    --color-background: 244 244 244;
+    --color-text: 51 51 51;
+    --color-light-text: 119 119 119;
+  }
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--background);
-  color: var(--text);
-  line-height: 1.6;
-}
+@layer components {
+  .btn {
+    @apply inline-block py-3 px-6 bg-blue-500 text-white no-underline rounded-md transition duration-300 ease-in-out hover:bg-green-500;
+  }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+  .section {
+    @apply py-20;
+  }
 
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--primary);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: var(--secondary);
-}
-
-.section {
-  padding: 80px 0;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  text-align: center;
-  color: var(--primary);
-}
-
-.card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  margin-bottom: 30px;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-@media (max-width: 768px) {
   .section-title {
-    font-size: 2rem;
+    @apply text-4xl mb-10 text-center text-blue-500;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 mb-6 transition duration-300 ease-in-out hover:transform hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-7xl mx-auto px-4;
   }
 }
 

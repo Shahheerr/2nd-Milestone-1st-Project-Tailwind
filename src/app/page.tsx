@@ -22,7 +22,7 @@ export default function Home() {
   ]
   return (
     <div>
-      <section className="section bg-gradient-to-r from-blue-500 to-teal-500 text-white">
+      <section className="bg-gradient-to-r from-blue-500 to-teal-500 text-white">
         <div className="container mx-auto px-4 py-20 text-center">
           <Image
             src={ProfilePic}
@@ -38,14 +38,14 @@ export default function Home() {
       </section>
 
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container">
           <h2 className="section-title">Featured Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ImageData.map((project, index) => (
               <div key={index} className="card">
                 <Image
                   src={project.imageSrc}
-                  alt={`Project ${project}`}
+                  alt={`Project ${project.title}`}
                   width={300}
                   height={200}
                   className="w-full h-48 object-cover mb-4 rounded"

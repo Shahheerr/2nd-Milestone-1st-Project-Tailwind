@@ -4,7 +4,7 @@ import ProfilePic from "../assets/WhatsApp Image 2024-07-13 at 15.39.55_175dd8d0
 export default function About() {
     return (
         <div className="section">
-            <div className="container mx-auto px-4">
+            <div className="container">
                 <h1 className="section-title">About Me</h1>
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>
@@ -17,7 +17,7 @@ export default function About() {
                         />
                     </div>
                     <div>
-                        <h2 className="text-3xl font-semibold mb-4">Hi, Rana Shaheer</h2>
+                        <h2 className="text-3xl font-semibold mb-4">Hi, I'm Rana Shaheer</h2>
                         <p className="text-gray-600 mb-6">
                             I'm a passionate web developer with over 5 years of experience in creating beautiful and functional websites. My expertise includes React, Next.js, and modern CSS techniques.
                         </p>
